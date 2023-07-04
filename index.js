@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.sendFile(`${__dirname}/index.html`);
+  res.send("Hello Backend")
 });
 
 app.listen(5050, () => {
