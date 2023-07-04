@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "booksappwithnext",
+  "private_key_id": "925ad4d54e9d17eb5401cba075e4f3a1801323fd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC54/9tHedkwnZG\n/tZGCwL4zcGUuHEwFbVuj+0Z8iZelJv8K2T3xlHap2HFUD8D6Tr7/vkSFPVnnNTm\n2EzgY7YAf4l1uhkCgyPm+0ZzMANo5wh3m79nxdo2rDVr1ZGZeItFjHfYABPWDf/g\nPY6gJVeCrrUCUINF3YgV8bXTgny2N921pvxhYQ7tFHJ//4YSATxKD/EfASf8jZtg\nBX6m9vP7SJhXorBQxE2IAo1zYv+bHN1tSZ8gYedyPYlLmh101cORv8S7NnDJt8v9\nduveasZYR/V16WOlg2OiZdbu7v01/lDctYBsJFlyp00d/tR58TcaslAq6/ZybJTO\nkjO84smnAgMBAAECggEAHF33r54dnpmyVPk0l7G8fV1gyiIvW6gkbL/X7dqvEkXZ\nW+z/VnRUL2rVl7e8NguUbbomJiU+odYkAypE6QUuU/sibe29PU3n36q+wHs2Of7v\notkIp3xg5XD4IgGQW3wyvKVH8JVqcYLnZj/ekP/Bz/Z7NuQ0dCfvSXH+Tk2eXGv8\n6GrfloR/+OSt7Bd3uUc6BSDaAW7E5O9a4fYcd6EK+xgu/xyRmSN8ns+OtUypkLA2\n9Pb3l2jP9cT9CiENlvh4YRT+JdwVcFOBVPv8lOAKYi0N0RVUqHs0ldS2gz9FtMNN\n59Q/VY9gnLI22+cI+UcH4d1x7nUlUp3xn8hyzjghEQKBgQD4zcWAOeozEQwaxalv\nyVWl1BCyGOO5xKXBrTtoHXBVM/aFpeJs8CwajmE678vu0oK1+pktMvBF7aI+H0x2\nZi0GnzyLk6DJnfl3X2Bp8u9RO9RYyDHxlb06Xn6Jfuc1UvR9xB5SphWRNlM0f8Tp\nDvVt8vZRBpgX5rIZVDFmFuwCHwKBgQC/RGVCrYqbhef3djYlayAtK2jOfYHXRyE4\nCt7PnQSe7bz3MfRCT0nZ/aT4Ly+UHXabu4qflW32Bp4JluOB1oW8x5N/Uiw8ME0f\nLuJthbDfaWlzNQvl66JMJ1RDEllpiKdO+/f78LxuSMyElcgkY8pg7NOGobOvqEnS\nY2pWCjsXeQKBgEE31yyMgdqO/mhKJeb6lKvaUeINaiw44uZI3YimJtr+uwE/gYHi\n1vzDE7OaRg+9OKwxG1PgxWDfMKcuFyH2GJlixkEkGoKfGVR0ONas6pSVpUz8dTMJ\neEfDm1G5ZSvyKcqJzRUHGiItZlQdpeUdmbIPfQeyPc4OF+NR0X0cRxMrAoGATEDo\nXfzyFa79HBt02tYqrddwoWJIMZuaEs3CpuLixLnjbGnuB8G0n8QP0SJ+xX45mzzZ\nt2XLwRpCR3Bwo4LzLqAindAU8qoPFS+L9j4mletgrx2m8LNQsSu83ECkhP6GNWcf\nJsKDXTSI1RMiB+AA/0Nr0XEGQjHFvKsF6eeKR4ECgYEAqPT/wnDFNvFQ+7eRe3hy\n3AGePHzpErrZPrAiOpBgIgvTKFUz+BdhVNLYjPbKV/DtceFMF3ZrO4uqIG6C1iUY\nUX3WG3Trw8y/xG8P3jRDLZdmIPuPRg3D019JzCrLWOR8fx24x2RlbbjJYxGRE6D5\npva/qT+1eS03xcIahtNE1Pc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "booksapp@booksappwithnext.iam.gserviceaccount.com",
+  "client_id": "106474453558073735232",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/booksapp%40booksappwithnext.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
