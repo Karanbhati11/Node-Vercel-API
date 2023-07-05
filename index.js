@@ -5,6 +5,7 @@ const path = require("path");
 const { google } = require("googleapis");
 const app = express();
 const upload = multer();
+const bodyParser = require("body-parser");
 const cors = require("cors");
 const corsOptions = {
   // origin: "https://ytdownloadfrontend.netlify.app",
@@ -13,9 +14,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.raw({ type: "application/octet-stream", limit: "100mb" }));
 
 app.get("/", (req, res) => {
-  res.send("Hello Backend")
+  res.send("Hello Backend");
 });
 
 app.listen(5050, () => {
@@ -84,6 +86,53 @@ app.post("/downloadfile", async (req, res) => {
       });
     }
   );
+});
+
+app.use("/uploadchunk", express.static("uploadchunk"));
+
+const chunkedData = {};
+
+app.post("/uploadchunk", async (req, res) => {
+  const { name, currentChunkIndex, totalChunks } = req.query;
+  const lastChunk = parseInt(currentChunkIndex) === parseInt(totalChunks) - 1;
+  const data = req.body.toString().split(",")[1];
+  const dataBuffer = Buffer.from(data, "base64");
+
+  if (!chunkedData[name]) {
+    chunkedData[name] = [];
+  }
+
+  chunkedData[name][parseInt(currentChunkIndex)] = dataBuffer;
+
+  if (lastChunk) {
+    const chunksReceived = chunkedData[name].filter(Boolean);
+    if (chunksReceived.length === parseInt(totalChunks, 10)) {
+      const accumulatedData = Buffer.concat(chunksReceived);
+
+      const bufferStream = new stream.PassThrough();
+      bufferStream.end(accumulatedData);
+
+      const { data } = await google
+        .drive({ version: "v3", auth })
+        .files.create({
+          media: {
+            mimeType: "application/pdf",
+            body: bufferStream,
+          },
+          requestBody: {
+            name: name,
+            parents: ["1U919T6rJEcUjjHrd68jxMXFsOr9izMDi"],
+          },
+          fields: "id,name",
+        });
+
+      console.log(`Uploaded file ${data.name} ${data.id}`);
+
+      delete chunkedData[name];
+    }
+  }
+
+  res.json("ok");
 });
 
 app.get("/filedetails", async (req, res) => {
